@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+        <!--需要的viewModel,通过mBinding.vm=mViewMode注入-->
+        <variable
+            name="vm"
+            type="jsjh.king.com.jsdandroidn.viewmodel.LoginViewModel" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhilt">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/x64"
+            android:paddingRight="@dimen/x64">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y160"
+                android:layout_marginTop="@dimen/y236"
+                android:scaleType="centerInside"
+                android:src="@mipmap/icon_login" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/y10"
+                android:gravity="center_horizontal"
+                android:text="酒商司机"
+                android:textColor="@color/text_333" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/y116"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/x32"
+                    android:layout_height="@dimen/x32"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/icon_login_user" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/x8"
+                    android:background="@android:color/transparent"
+                    android:hint="请输入账号"
+                    android:text="@={vm.userAccout}"
+                    android:textColor="@color/text_ccc"
+                    android:textCursorDrawable="@drawable/bg_cursor"
+                    android:textSize="@dimen/x28" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y1"
+                android:layout_marginTop="@dimen/y12"
+                android:background="@color/div_login" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/y30"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/x32"
+                    android:layout_height="@dimen/x32"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/icon_login_password" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/x8"
+                    android:background="@android:color/transparent"
+                    android:hint="请输入密码"
+                    android:text="@={vm.userPasswoed}"
+                    android:textColor="@color/text_ccc"
+                    android:textCursorDrawable="@drawable/bg_cursor"
+                    android:textSize="@dimen/x28" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y1"
+                android:layout_marginTop="@dimen/y12"
+                android:background="@color/div_login" />
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y88"
+                android:layout_marginTop="@dimen/y80"
+                android:background="@drawable/bg_btn_login"
+                android:enabled="@{vm.isEnabledLoginBtn}"
+                android:onClick="@{() -> vm.toLoginClick()}"
+                android:text="登入"
+                android:textColor="@color/colorWhilt" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y40" />
+        </LinearLayout>
+    </ScrollView>
+</layout>

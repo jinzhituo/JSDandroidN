@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+
+    <color name="colorWhilt">#FFFFFF</color>
+
+    <color name="div_login">#E5E5E5</color>
+    <color name="div_e5">#E5E5E5</color>
+    <color name="bg_toolbar">#4D66FD</color>
+    <color name="bg_btn_login">#4A77FF</color>
+    <color name="bg_btn_visit_submit">#4D66FD</color>
+    <color name="bg_view_main_gradient_start">#4d66fd</color>
+    <color name="bg_view_main_gradient_end">#4d7efd</color>
+    <color name="bg_fragment_work_btn">#4d7efd</color>
+    <color name="bg_f7">#f7f7f7</color>
+    <color name="bg_ccc">#CCCCCC</color>
+    <color name="bg_eee">#EEEEEE</color>
+
+
+    <color name="text_ccc">#CCCCCC</color>
+    <color name="text_fe">#FEFEFE</color>
+    <color name="text_d3">#D3D3D3</color>
+    <color name="text_black">#000000</color>
+    <color name="text_333">#333333</color>
+    <color name="text_222">#222222</color>
+    <color name="text_666">#666666</color>
+    <color name="text_999">#999999</color>
+    <color name="text_main_default">#4d7bfe</color>
+    <color name="text_main_gray_666">#666666</color>
+    <color name="text_main_bottom_navigation_normal">#999999</color>
+    <color name="text_main_bottom_navigation_selected">#4d7bfe</color>
+    <color name="text_mine_change_password_deal">#0495F2</color>
+    <color name="text_new_pay_visit_user">#4d77fd</color>
+    <color name="text_order_list_price">#d91f13</color>
+    <color name="text_red">#d91f13</color>
+    <color name="text_shop_cat_notice">#ff9900</color>
+
+    <color name="btn_bg_red">#ff4c4c</color>
+
+    <color name="chart_start">#ffb8d3</color>
+    <color name="chart_end">#a1a8ea</color>
+    <color name="chart_select">#bad2ea</color>
+</resources>
