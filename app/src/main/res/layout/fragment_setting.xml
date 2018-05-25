@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+        <!--需要的viewModel,通过mBinding.vm=mViewMode注入-->
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:id="@+id/layout_mine_setting_safety"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhilt"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="@dimen/x27"
+                    android:paddingLeft="@dimen/x24"
+                    android:paddingRight="@dimen/x24"
+                    android:paddingTop="@dimen/y25">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/text_mine_setting_safety"
+                        android:textColor="@color/text_333"
+                        android:textSize="@dimen/x30" />
+
+                    <ImageView
+                        android:layout_width="@dimen/x12"
+                        android:layout_height="@dimen/y22"
+                        android:src="@mipmap/icon_into" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/y1"
+                    android:background="@color/div_login" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="@dimen/x27"
+                    android:paddingLeft="@dimen/x24"
+                    android:paddingRight="@dimen/x24"
+                    android:paddingTop="@dimen/y25">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/text_mine_setting_memory"
+                        android:textColor="@color/text_333"
+                        android:textSize="@dimen/x30" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="50.2MB"
+                        android:textColor="@color/text_666"
+                        android:textSize="@dimen/x24" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/y1"
+                    android:background="@color/div_login" />
+
+
+            </LinearLayout>
+
+        </ScrollView>
+    </LinearLayout>
+</layout>

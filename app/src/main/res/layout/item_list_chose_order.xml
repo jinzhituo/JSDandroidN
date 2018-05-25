@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="java.lang.String" />
+
+        <variable
+            name="bean"
+            type="jsjh.king.com.jsdandroidn.model.bean.ChoseOrderBean" />
+
+        <variable
+            name="adapter"
+            type="jsjh.king.com.jsdandroidn.adapter.ChoseOrderAdapter" />
+
+        <variable
+            name="position"
+            type="int" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/x20"
+        android:layout_marginRight="@dimen/x20"
+        android:layout_marginTop="@dimen/y20"
+        android:background="@drawable/bg_item_chose_car"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/y24"
+        android:paddingLeft="@dimen/x24"
+        android:paddingRight="@dimen/x24"
+        android:paddingTop="@dimen/y24">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/x44"
+                android:layout_height="@dimen/x44"
+                android:onClick="@{()->adapter.clickIsCheck(bean,position)}"
+                android:scaleType="centerInside"
+                android:src="@{bean.isSelect ? @drawable/icon_shop_cat_check_selected : @drawable/icon_shop_cat_check_normal}" />
+
+            <ImageView
+                android:layout_width="@dimen/x44"
+                android:layout_height="@dimen/x44"
+                android:layout_marginLeft="@dimen/x14"
+                android:onClick="@{()->adapter.clickIsCheck(bean,position)}"
+                android:scaleType="centerInside"
+                android:src="@mipmap/icon_item_order" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x10"
+                android:text="@string/text_chose_order_number"
+                android:textColor="@color/text_666"
+                android:textSize="@dimen/x30" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x5"
+                android:layout_weight="1"
+                android:text="@{bean.orderNumber}"
+                android:textColor="@color/text_999"
+                android:textSize="@dimen/x30" />
+
+            <ImageView
+                android:layout_width="@dimen/x12"
+                android:layout_height="@dimen/y24"
+                android:src="@mipmap/icon_into" />
+        </LinearLayout>
+
+        <View
+            style="@style/div_orientation_e5e5e5"
+            android:layout_marginTop="@dimen/y24" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/y55"
+            android:paddingLeft="@dimen/x50"
+            android:paddingRight="@dimen/x50"
+            android:paddingTop="@dimen/y24">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_chose_order_commodity"
+                    android:textColor="@color/text_666"
+                    android:textSize="@dimen/x30" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:text="@{bean.orderCommodity}"
+                    android:textColor="@color/text_666"
+                    android:textSize="@dimen/x30" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/y28"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_chose_order_amount"
+                    android:textColor="@color/text_666"
+                    android:textSize="@dimen/x30" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{bean.orderAmount}"
+                    android:textColor="@color/text_666"
+                    android:textSize="@dimen/x30" />
+
+            </LinearLayout>
+
+            <View
+                style="@style/div_orientation_e5e5e5"
+                android:layout_marginTop="@dimen/y28" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/y28"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_chose_order_address"
+                    android:textColor="@color/text_666"
+                    android:textSize="@dimen/x30" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{bean.orderAddress}"
+                    android:textColor="@color/text_666"
+                    android:textSize="@dimen/x30" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>
+

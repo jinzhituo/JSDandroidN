@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/menu_layout"
+    android:layout_height="@dimen/y86"
+    android:minHeight="@dimen/y86"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <View
+        android:id="@+id/menu_div"
+        android:layout_width="@dimen/x4"
+        android:layout_height="match_parent"
+        android:background="@color/div_menu" />
+
+    <ImageView
+        android:id="@+id/menu_imageview"
+        android:layout_width="@dimen/x32"
+        android:layout_height="@dimen/x32"
+        android:layout_marginLeft="@dimen/x40"
+        android:scaleType="centerInside" />
+
+    <TextView
+        android:id="@+id/menu_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/x22"
+        android:layout_weight="1"
+        android:text="123"
+        android:textColor="@color/text_666"
+        android:textSize="@dimen/x28" />
+
+    <ImageView
+        android:id="@+id/menu_into"
+        android:layout_width="@dimen/x8"
+        android:layout_height="@dimen/y20"
+        android:layout_marginRight="@dimen/x38"
+        android:src="@mipmap/icon_into"
+        android:tint="@color/text_999" />
+
+</LinearLayout>

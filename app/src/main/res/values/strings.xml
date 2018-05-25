@@ -6,4 +6,33 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
+
+    <string name="title_main_work">工作台</string>
+
+
+    <string name="title_menu_work">工作台</string>
+    <string name="title_menu_drive">酒商司机端</string>
+    <string name="title_menu_address">通讯录</string>
+    <string name="title_menu_setting">设置</string>
+    <string name="title_menu_about">关于我们</string>
+    <string name="title_menu_exit">退出</string>
+    <string name="title_chose_car">选择车辆</string>
+    <string name="title_chose_order">选择订单</string>
+
+
+    <string name="text_mine_about_company">浙江酒商酒汇网络科技有限公司</string>
+    <string name="text_mine_about_company_e">Zhejiang JiushangJiuHui Network Technology Co.,Ltd</string>
+    <string name="text_mine_setting_safety">账户与安全</string>
+    <string name="text_mine_setting_memory">清楚缓存</string>
+    <string name="text_work_loading">装载</string>
+    <string name="text_chose_car_number">车牌：</string>
+    <string name="text_chose_car_type">车型：</string>
+    <string name="text_chose_order_loading">装车</string>
+    <string name="text_chose_order_all">全选</string>
+    <string name="text_chose_order_number">订单号：</string>
+    <string name="text_chose_order_commodity">商品：</string>
+    <string name="text_chose_order_amount">数量：</string>
+    <string name="text_chose_order_address">地址：</string>
+
+
 </resources>

@@ -6,23 +6,24 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_work"
-            android:icon="@drawable/ic_menu_camera"
+            android:icon="@mipmap/icon_menu_work"
             android:title="工作台" />
         <item
             android:id="@+id/nav_address"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@mipmap/icon_menu_address"
             android:title="通讯录" />
         <item
             android:id="@+id/nav_setting"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@mipmap/icon_menu_setting"
             android:title="设置" />
         <item
             android:id="@+id/nav_about"
-            android:icon="@drawable/ic_menu_manage"
+            android:icon="@mipmap/icon_menu_about"
             android:title="关于我们" />
         <item
             android:id="@+id/nav_exit"
-            android:icon="@drawable/ic_menu_manage"
+            android:icon="@mipmap/icon_menu_exit"
+            android:checkable="false"
             android:title="退出" />
     </group>
 

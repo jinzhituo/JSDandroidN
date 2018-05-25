@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+        <!--需要的viewModel,通过mBinding.vm=mViewMode注入-->
+    </data>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="@dimen/x140"
+            android:layout_height="@dimen/x140"
+            android:layout_marginTop="@dimen/y140"
+            android:src="@mipmap/icon_mine_about_ic" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y23"
+            android:text="@string/app_name"
+            android:textColor="@color/text_333"
+            android:textSize="@dimen/x28" />
+
+        <TextView
+            android:id="@+id/tv_mine_about_version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y23"
+            android:textColor="@color/text_999"
+            android:textSize="@dimen/x16" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/y23"
+            android:layout_weight="1"
+            android:gravity="bottom"
+            android:text="@string/text_mine_about_company"
+            android:textColor="@color/text_999"
+            android:textSize="@dimen/x16" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/y23"
+            android:layout_marginTop="@dimen/y11"
+            android:text="@string/text_mine_about_company_e"
+            android:textColor="@color/text_999"
+            android:textSize="@dimen/x16" />
+
+    </LinearLayout>
+
+</layout>

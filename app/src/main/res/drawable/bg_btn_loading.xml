@@ -5,5 +5,5 @@
     <solid android:color="@color/bg_default" />
     <!--//solid用于设置填充形状的颜色-->
     <!--//corners用于创建圆角（只用于形状是矩形）-->
-    <corners android:radius="@dimen/x4" />
+    <corners android:radius="@dimen/x8" />
 </shape>

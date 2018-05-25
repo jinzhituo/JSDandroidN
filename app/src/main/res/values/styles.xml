@@ -20,6 +20,7 @@
         <item name="colorPrimary">@color/colorWhilt</item>
         <item name="colorPrimaryDark">@color/colorWhilt</item>
         <item name="colorAccent">@color/text_ccc</item>
+        <item name="android:textColorPrimary">@color/title_default</item>
     </style>
 
     <style name="FullWhileAppTheme" parent="Theme.AppCompat.Light.NoActionBar">
@@ -37,6 +38,10 @@
         <item name="android:windowIsTranslucent">true</item>
     </style>
 
+    <style name="ToolbarMenuTextSize" parent="@style/TextAppearance.AppCompat.Menu">
+        <item name="android:textSize">@dimen/x36</item>
+    </style>
+
     <style name="loading_dialog">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">match_parent</item>
@@ -51,4 +56,10 @@
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="div_orientation_e5e5e5">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/y1</item>
+        <item name="android:background">@color/div_e5</item>
+    </style>
 </resources>

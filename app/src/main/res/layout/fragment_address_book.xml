@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+        <!--需要的viewModel,通过mBinding.vm=mViewMode注入-->
+        <variable
+            name="vm"
+            type="jsjh.king.com.jsdandroidn.viewmodel.AddressBookViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhilt">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycle_view_address_book"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorWhilt" />
+
+        <jsjh.king.com.jsdandroidn.weight.IndexBar
+            android:id="@+id/index_bar_activity_address_book"
+            android:layout_width="@dimen/x300"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@android:color/transparent">
+
+            <jsjh.king.com.jsdandroidn.weight.SideBar
+                android:id="@+id/side_bar_activity_address_book"
+                android:layout_width="@dimen/x60"
+                android:layout_height="match_parent" />
+        </jsjh.king.com.jsdandroidn.weight.IndexBar>
+
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppWhiltTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorWhilt</item>
+        <item name="colorPrimaryDark">@color/colorWhilt</item>
+        <item name="colorAccent">@color/colorWhilt</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:textColorPrimary">@color/title_default</item>
+    </style>
+
+    <style name="FullDarkAppTheme" parent="AppWhiltTheme">
+        <!-- Customize your theme here. -->
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+</resources>
