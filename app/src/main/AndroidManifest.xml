@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="jsjh.king.com.jsdandroidn">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -30,6 +32,9 @@
             android:theme="@style/AppWhiltTheme" />
         <activity android:name=".ui.work.ChoseCarActivity" />
         <activity android:name=".ui.work.ChoseOrderActivity" />
+        <activity android:name=".ui.work.OrderDeliveryActivity" />
+        <activity android:name=".ui.mine.ChangePasswordActivity" />
+        <activity android:name=".ui.mine.MineInformationActivity" />
     </application>
 
 </manifest>

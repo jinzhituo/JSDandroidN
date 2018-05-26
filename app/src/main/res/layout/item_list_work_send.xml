@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="jsjh.king.com.jsdandroidn.R" />
+
+        <import type="android.view.View" />
+
+        <variable
+            name="bean"
+            type="jsjh.king.com.jsdandroidn.model.bean.WorkSendBean" />
+
+        <variable
+            name="adapter"
+            type="jsjh.king.com.jsdandroidn.adapter.WorkSendAdapter" />
+
+        <variable
+            name="position"
+            type="int" />
+
+        <variable
+            name="isSend"
+            type="Boolean" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/y20"
+        android:background="@color/colorWhilt"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/x24">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y71"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingRight="@dimen/x24">
+
+            <ImageView
+                android:layout_width="@dimen/x41"
+                android:layout_height="@dimen/x41"
+                android:scaleType="centerInside"
+                android:src="@mipmap/icon_work_car" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="@{isSend ? @string/text_item_work_state_loading : @string/text_item_work_state_send}"
+                android:textColor="@color/text_666"
+                android:textSize="@dimen/x24" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{@string/text_item_work_car_number+bean.carNum}"
+                android:textColor="@color/text_666"
+                android:textSize="@dimen/x24" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x32"
+                android:text="@{@string/text_item_work_car_type+bean.carType}"
+                android:textColor="@color/text_666"
+                android:textSize="@dimen/x24" />
+
+        </LinearLayout>
+
+        <View style="@style/div_orientation_e5e5e5" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y71"
+            android:layout_marginTop="@dimen/y28"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingRight="@dimen/x24">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_item_work_merchar_name"
+                android:textColor="@color/text_666"
+                android:textSize="@dimen/x24" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x32"
+                android:layout_weight="1"
+                android:text="@{bean.mercharName}"
+                android:textColor="@color/text_333"
+                android:textSize="@dimen/x24" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y71"
+            android:layout_marginTop="@dimen/y28"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingRight="@dimen/x24">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_item_work_commodity"
+                android:textColor="@color/text_666"
+                android:textSize="@dimen/x24" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x32"
+                android:layout_weight="1"
+                android:text="@{bean.commodity}"
+                android:textColor="@color/text_333"
+                android:textSize="@dimen/x24" />
+
+            <ImageView
+                android:layout_width="@dimen/x12"
+                android:layout_height="@dimen/y24"
+                android:src="@mipmap/icon_into" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y71"
+            android:layout_marginTop="@dimen/y28"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingRight="@dimen/x24">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_item_work_number"
+                android:textColor="@color/text_666"
+                android:textSize="@dimen/x24" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x32"
+                android:layout_weight="1"
+                android:text="@{bean.cNumber}"
+                android:textColor="@color/text_333"
+                android:textSize="@dimen/x24" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y71"
+            android:layout_marginTop="@dimen/y28"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingRight="@dimen/x24">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_item_work_address"
+                android:textColor="@color/text_666"
+                android:textSize="@dimen/x24" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x32"
+                android:text="@{bean.address}"
+                android:textColor="@color/text_333"
+                android:textSize="@dimen/x24" />
+
+        </LinearLayout>
+
+        <View style="@style/div_orientation_e5e5e5" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/y28"
+            android:paddingRight="@dimen/x24"
+            android:paddingTop="@dimen/y28">
+
+            <TextView
+                android:layout_width="@dimen/x180"
+                android:layout_height="@dimen/y62"
+                android:layout_marginRight="@dimen/x56"
+                android:background="@drawable/bg_text_work_call"
+                android:gravity="center"
+                android:text="@string/text_item_work_call"
+                android:textColor="@color/text_main_default"
+                android:textSize="@dimen/x28"
+                android:visibility="@{isSend ? View.VISIBLE : View.GONE}" />
+
+            <TextView
+                android:layout_width="@dimen/x180"
+                android:layout_height="@dimen/y62"
+                android:background="@drawable/bg_text_work_uninstall"
+                android:gravity="center"
+                android:onClick="@{()->adapter.clickRightBtn(bean,position,isSend)}"
+                android:text="@{isSend ? @string/text_item_work_verify : @string/text_item_work_uninstall}"
+                android:textColor="@color/colorWhilt"
+                android:textSize="@dimen/x28" />
+
+        </LinearLayout>
+    </LinearLayout>
+</layout>

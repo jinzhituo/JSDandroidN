@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+        <!--需要的viewModel,通过mBinding.vm=mViewMode注入-->
+        <variable
+        name="vm"
+        type="jsjh.king.com.jsdandroidn.viewmodel.OrderDeliveryViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_f7"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/toolbar_order_delivery"
+            layout="@layout/toolbar_while_style" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    style="@style/text_order_delivery_l"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/y44">
+
+                    <TextView
+                        style="@style/text_order_delivery_tv"
+                        android:text="@string/text_order_delivery_comment"
+                        android:textColor="@color/text_666" />
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/y256"
+                        android:layout_marginBottom="@dimen/y40">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/y256"
+                            android:afterTextChanged="@{vm.getAfterTextChanged()}"
+                            android:background="@color/bg_eee"
+                            android:gravity="start"
+                            android:maxLength="200"
+                            android:padding="@dimen/x20"
+                            android:text="@{vm.editPurpose}"
+                            android:textColor="@color/text_333"
+                            android:textCursorDrawable="@drawable/bg_cursor"
+                            android:textSize="@dimen/x28" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right|bottom"
+                            android:layout_marginBottom="@dimen/x12"
+                            android:layout_marginRight="@dimen/x12"
+                            android:text='@{vm.eidtLenght+@string/text_eidt_max_lenght}'
+                            android:textColor="@color/text_d3"
+                            android:textSize="@dimen/x24" />
+
+                    </FrameLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/text_order_delivery_l"
+                    android:layout_marginTop="@dimen/y20"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/y40">
+
+                    <TextView
+                        style="@style/text_order_delivery_tv"
+                        android:text="@string/text_order_delivery_image"
+                        android:textColor="@color/text_666" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/y28"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="@dimen/x140"
+                            android:layout_height="@dimen/x140"
+                            android:src="@mipmap/ic_default_pic" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+
+                        <ImageView
+                            android:layout_width="@dimen/x140"
+                            android:layout_height="@dimen/x140"
+                            android:src="@mipmap/ic_default_pic" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+
+                        <ImageView
+                            android:layout_width="@dimen/x140"
+                            android:layout_height="@dimen/x140"
+                            android:src="@mipmap/ic_default_pic" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+
+                        <ImageView
+                            android:layout_width="@dimen/x140"
+                            android:layout_height="@dimen/x140"
+                            android:src="@mipmap/ic_default_pic" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/y60" />
+            </LinearLayout>
+
+        </ScrollView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y88"
+            android:background="@color/bg_default"
+            android:gravity="center"
+            android:text="@string/text_order_delivery"
+            android:textColor="@color/colorWhilt"
+            android:textSize="@dimen/x32" />
+    </LinearLayout>
+</layout>
+

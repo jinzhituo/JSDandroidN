@@ -5,6 +5,7 @@ import java.util.List;
 
 import jsjh.king.com.jsdandroidn.base.BaseLoadListener;
 import jsjh.king.com.jsdandroidn.model.bean.ChoseCarBean;
+import jsjh.king.com.jsdandroidn.model.bean.WorkSendBean;
 import jsjh.king.com.jsdandroidn.model.modelimpl.ChoseCarModelImpl;
 
 
@@ -34,4 +35,5 @@ public class ChoseCarModel implements ChoseCarModelImpl {
         loadListener.loadSuccess(list);
         loadListener.loadComplete();
     }
+
 }

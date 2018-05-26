@@ -80,7 +80,6 @@ public class LoginCompanyActivity extends BaseActivity implements LoginCompanyVi
 
     @Override
     public void loadComplete() {
-
         mBinding.recyclerviewLoginCompany.loadMoreComplete(); //结束加载
         mBinding.recyclerviewLoginCompany.refreshComplete(); //结束刷新
     }

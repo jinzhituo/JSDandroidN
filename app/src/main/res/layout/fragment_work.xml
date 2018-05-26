@@ -14,51 +14,110 @@
 
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/bg_f7">
+
+        <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:gravity="center_horizontal"-->
+        <!--android:visibility="@{vm.isWorkLoading ? View.VISIBLE : View.GONE}"-->
+        <!--android:orientation="vertical">-->
+
+        <!--<ImageView-->
+        <!--android:layout_width="@dimen/x360"-->
+        <!--android:layout_height="@dimen/x360"-->
+        <!--android:layout_marginTop="@dimen/y258"-->
+        <!--android:scaleType="centerInside"-->
+        <!--android:src="@mipmap/icon_work_loading" />-->
+
+        <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="@dimen/y60"-->
+        <!--android:text="待装载订单10单"-->
+        <!--android:textColor="@color/text_333"-->
+        <!--android:textSize="@dimen/x32" />-->
+
+        <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="共777件货物"-->
+        <!--android:textColor="@color/text_333"-->
+        <!--android:textSize="@dimen/x32" />-->
+
+        <!--<Button-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="@dimen/y88"-->
+        <!--android:layout_marginLeft="@dimen/x60"-->
+        <!--android:layout_marginRight="@dimen/x60"-->
+        <!--android:layout_marginTop="@dimen/y78"-->
+        <!--android:background="@drawable/bg_btn_loading"-->
+        <!--android:onClick="@{()->vm.clickToChoseCar()}"-->
+        <!--android:gravity="center"-->
+        <!--android:text="@string/text_work_loading"-->
+        <!--android:textColor="@color/colorWhilt"-->
+        <!--android:textSize="@dimen/x32" />-->
+
+        <!--</LinearLayout>-->
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:gravity="center_horizontal"
             android:visibility="@{vm.isWorkLoading ? View.VISIBLE : View.GONE}"
             android:orientation="vertical">
 
-            <ImageView
-                android:layout_width="@dimen/x360"
-                android:layout_height="@dimen/x360"
-                android:layout_marginTop="@dimen/y258"
-                android:scaleType="centerInside"
-                android:src="@mipmap/icon_work_loading" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y82"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/x24"
+                android:paddingRight="@dimen/x24"
+                android:background="@color/colorWhilt"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:visibility="@{vm.isWorkSend ? View.VISIBLE : View.GONE}"
+                    android:text="待装载订单100单"
+                    android:textColor="@color/text_333"
+                    android:textSize="@dimen/x28" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:visibility="@{vm.isWorkSend ? View.GONE : View.VISIBLE}"
+                    android:text="最佳配送路线"
+                    android:textColor="@color/text_333"
+                    android:textSize="@dimen/x28" />
+
+                <ImageView
+                    android:layout_width="@dimen/x12"
+                    android:layout_height="@dimen/y24"
+                    android:src="@mipmap/icon_into" />
+
+            </LinearLayout>
+
+            <com.jcodecraeer.xrecyclerview.XRecyclerView
+                android:id="@+id/recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/y60"
-                android:text="待装载订单10单"
-                android:textColor="@color/text_333"
-                android:textSize="@dimen/x32" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="共777件货物"
-                android:textColor="@color/text_333"
-                android:textSize="@dimen/x32" />
-
-            <Button
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/y88"
-                android:layout_marginLeft="@dimen/x60"
-                android:layout_marginRight="@dimen/x60"
-                android:layout_marginTop="@dimen/y78"
-                android:background="@drawable/bg_btn_loading"
-                android:onClick="@{()->vm.clickToChoseCar()}"
+                android:text="@{vm.isWorkSend ? @string/text_work_send : @string/text_work_arrive}"
+                android:background="@color/bg_default"
+                android:onClick="@{()->vm.clickToSend()}"
                 android:gravity="center"
-                android:text="@string/text_work_loading"
-                android:textColor="@color/colorWhilt"
-                android:textSize="@dimen/x32" />
-
+                android:textSize="@dimen/x32"
+                android:textColor="@color/colorWhilt"/>
         </LinearLayout>
+
 
     </FrameLayout>
 

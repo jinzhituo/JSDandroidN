@@ -12,6 +12,6 @@ import jsjh.king.com.jsdandroidn.model.bean.WorkSendBean;
  * GitHub https://github.com/shaogeng1994
  */
 
-public interface ChoseCarModelImpl {
-    void getList(int currPage, BaseLoadListener<List<ChoseCarBean>> loadListener);
+public interface WorkSendModelImpl {
+    void getList(int currPage, BaseLoadListener<List<WorkSendBean>> loadListener);
 }

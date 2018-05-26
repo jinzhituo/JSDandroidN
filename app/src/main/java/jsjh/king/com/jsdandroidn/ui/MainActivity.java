@@ -29,6 +29,7 @@ import jsjh.king.com.jsdandroidn.ui.fragment.AddressBookFragment;
 import jsjh.king.com.jsdandroidn.ui.fragment.SettingFragment;
 import jsjh.king.com.jsdandroidn.ui.fragment.WorkFragment;
 import jsjh.king.com.jsdandroidn.ui.login.LoginActivity;
+import jsjh.king.com.jsdandroidn.ui.mine.MineInformationActivity;
 import jsjh.king.com.jsdandroidn.viewmodel.MainViewModel;
 
 public class MainActivity extends BaseActivity implements AdapterView.OnItemClickListener {
@@ -82,6 +83,7 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
         if (mBinding.drawerLayout.isDrawerOpen(GravityCompat.START)) {
             mBinding.drawerLayout.closeDrawer(GravityCompat.START);
         } else {
+
             super.onBackPressed();
         }
     }
@@ -89,7 +91,10 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         mBinding.drawerLayout.closeDrawer(GravityCompat.START);
-        if (position == 0) return;
+        if (position == 0) {
+            startActivity(new Intent(MainActivity.this, MineInformationActivity.class));
+            return;
+        }
         for (int i = 0; i < mMenuItemList.size(); i++) {
             if (mMenuItemList.size() == position) {
                 break;
@@ -134,7 +139,7 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
         ft.setCustomAnimations(R.anim.abc_fade_in, R.anim.abc_fade_out, R.anim.abc_fade_in, R.anim.abc_fade_out);
         // For the drawer navigation, we replace the fragment
-        ft.replace(R.id.content_frame, frag).addToBackStack(null).commit();
+        ft.replace(R.id.content_frame, frag).commit();
     }
 
     /**

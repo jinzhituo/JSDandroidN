@@ -18,13 +18,22 @@
     <string name="title_menu_exit">退出</string>
     <string name="title_chose_car">选择车辆</string>
     <string name="title_chose_order">选择订单</string>
+    <string name="title_order_delivery">货物到达</string>
+    <string name="title_change_password">修改密码</string>
+    <string name="title_activity_mine_information">账户信息</string>
 
 
+    <string name="text_eidt_max_lenght">/200</string>
     <string name="text_mine_about_company">浙江酒商酒汇网络科技有限公司</string>
     <string name="text_mine_about_company_e">Zhejiang JiushangJiuHui Network Technology Co.,Ltd</string>
     <string name="text_mine_setting_safety">账户与安全</string>
     <string name="text_mine_setting_memory">清楚缓存</string>
+    <string name="text_item_change_password_sure">确定</string>
+    <string name="text_item_change_password_con">我已经同意并接受</string>
+    <string name="text_item_change_password_deal">《酒商酒汇注册协议》</string>
     <string name="text_work_loading">装载</string>
+    <string name="text_work_send">发车</string>
+    <string name="text_work_arrive">到仓</string>
     <string name="text_chose_car_number">车牌：</string>
     <string name="text_chose_car_type">车型：</string>
     <string name="text_chose_order_loading">装车</string>
@@ -33,6 +42,22 @@
     <string name="text_chose_order_commodity">商品：</string>
     <string name="text_chose_order_amount">数量：</string>
     <string name="text_chose_order_address">地址：</string>
+    <string name="text_order_delivery">提交</string>
+    <string name="text_order_delivery_comment">货物到货备注</string>
+    <string name="text_order_delivery_image">到达凭证上传</string>
+    <string name="text_item_work_state_loading">已装载订单</string>
+    <string name="text_item_work_state_send">配送中</string>
+    <string name="text_item_work_car_number">车牌：</string>
+    <string name="text_item_work_car_type">车型：</string>
+    <string name="text_item_work_merchar_name">商家名称：</string>
+    <string name="text_item_work_commodity">商品：</string>
+    <string name="text_item_work_number">数量：</string>
+    <string name="text_item_work_address">地址：</string>
+    <string name="text_item_work_call">联系客户</string>
+    <string name="text_item_work_verify">确认到达</string>
+    <string name="text_item_work_uninstall">卸载订单</string>
+    <string name="text_mine_information_user">用户名</string>
+    <string name="text_mine_information_header">头像</string>
 
 
 </resources>

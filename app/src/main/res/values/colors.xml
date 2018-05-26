@@ -33,7 +33,7 @@
     <color name="text_666">#666666</color>
     <color name="text_999">#999999</color>
     <color name="text_menu">#00c356</color>
-    <color name="text_main_default">#4d7bfe</color>
+    <color name="text_main_default">#00c356</color>
     <color name="text_main_gray_666">#666666</color>
     <color name="text_main_bottom_navigation_normal">#999999</color>
     <color name="text_main_bottom_navigation_selected">#4d7bfe</color>

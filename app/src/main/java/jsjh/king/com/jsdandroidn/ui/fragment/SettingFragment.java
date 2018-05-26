@@ -1,5 +1,6 @@
 package jsjh.king.com.jsdandroidn.ui.fragment;
 
+import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -11,6 +12,7 @@ import jsjh.king.com.jsdandroidn.R;
 import jsjh.king.com.jsdandroidn.base.BaseFragment;
 import jsjh.king.com.jsdandroidn.databinding.FragmentAboutBinding;
 import jsjh.king.com.jsdandroidn.databinding.FragmentSettingBinding;
+import jsjh.king.com.jsdandroidn.ui.mine.ChangePasswordActivity;
 
 /**
  * Created by ShaoGeng on 2018/5/21.
@@ -18,7 +20,7 @@ import jsjh.king.com.jsdandroidn.databinding.FragmentSettingBinding;
  * GitHub https://github.com/shaogeng1994
  */
 
-public class SettingFragment extends BaseFragment{
+public class SettingFragment extends BaseFragment {
 
     private View view;
     private FragmentSettingBinding mBinding;
@@ -51,7 +53,13 @@ public class SettingFragment extends BaseFragment{
 
     @Override
     public void initListener() {
-
+        mBinding.tvFragmentSettingSaafety.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent it = new Intent(getActivity(), ChangePasswordActivity.class);
+                startActivity(it);
+            }
+        });
     }
 
     private void initRecyclerView() {

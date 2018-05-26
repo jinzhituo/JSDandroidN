@@ -62,4 +62,22 @@
         <item name="android:layout_height">@dimen/y1</item>
         <item name="android:background">@color/div_e5</item>
     </style>
+
+    <style name="text_order_delivery_tv">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/x28</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+    <style name="text_order_delivery_l">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:paddingLeft">@dimen/x24</item>
+        <item name="android:paddingRight">@dimen/x24</item>
+        <item name="android:paddingBottom">@dimen/y28</item>
+        <item name="android:paddingTop">@dimen/y28</item>
+        <item name="android:background">@color/colorWhilt</item>
+    </style>
 </resources>
