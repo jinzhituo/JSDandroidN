@@ -1,17 +1,28 @@
 package jsjh.king.com.jsdandroidn.base;
 
 import android.app.Dialog;
+import android.content.Context;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Toast;
 
+import com.maning.mndialoglibrary.MProgressDialog;
+import com.maning.mndialoglibrary.MStatusDialog;
+import com.maning.mndialoglibrary.config.MDialogConfig;
+import com.maning.mndialoglibrary.listeners.OnDialogDismissListener;
+
+import jsjh.king.com.jsdandroidn.R;
 import jsjh.king.com.jsdandroidn.global.AppManager;
 import jsjh.king.com.jsdandroidn.helper.LoadingDialogHelper;
+import jsjh.king.com.jsdandroidn.utils.DisplayUtils;
 import jsjh.king.com.jsdandroidn.utils.statusbarutil.StatusBarCompat;
 
 
@@ -24,6 +35,7 @@ import jsjh.king.com.jsdandroidn.utils.statusbarutil.StatusBarCompat;
 public abstract class BaseActivity extends AppCompatActivity implements BaseFuncImpl, View.OnClickListener {
 
     private Dialog loadingDialog;
+    private Handler mHandler = new Handler();
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -102,6 +114,28 @@ public abstract class BaseActivity extends AppCompatActivity implements BaseFunc
 
     }
 
+    @Override
+    public boolean dispatchTouchEvent(MotionEvent event) {
+        //注：回调 3
+        if (event.getAction() == MotionEvent.ACTION_DOWN) {
+            View v = getCurrentFocus();
+            if (DisplayUtils.isShouldHideInputB(v, event)) {
+
+                InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+                if (imm != null) {
+                    imm.hideSoftInputFromWindow(v.getWindowToken(), 0);
+                }
+            }
+            return super.dispatchTouchEvent(event);
+        }
+        // 必不可少，否则所有的组件都不会有TouchEvent了
+        if (getWindow().superDispatchTouchEvent(event)) {
+            return true;
+        }
+        return onTouchEvent(event);
+    }
+
+
     /**
      * 着色状态栏（4.4以上系统有效）
      *
@@ -145,7 +179,64 @@ public abstract class BaseActivity extends AppCompatActivity implements BaseFunc
         });
     }
 
-    public void showToast(String msg){
-        Toast.makeText(BaseActivity.this , msg , Toast.LENGTH_SHORT).show();
+    public void showToast(String msg) {
+        Toast.makeText(BaseActivity.this, msg, Toast.LENGTH_SHORT).show();
     }
+
+    public void showProgressDialog(String text) {
+        MProgressDialog.showProgress(this, text);
+    }
+
+    public void hideProgressDialog() {
+        if (MProgressDialog.isShowing()) {
+            MProgressDialog.dismissProgress();
+        }
+    }
+
+    public void showDismissProgressDialog(String text) {
+        MProgressDialog.showProgress(this, text);
+        //延时关闭
+        delayDismissProgressDialog();
+    }
+
+    public void showStatusDialog01(String text) {
+        new MStatusDialog(this).show(text, this.getResources().getDrawable(R.mipmap.mn_icon_dialog_ok));
+    }
+
+    public void showStatusDialog02(String text, OnDialogDismissListener listener) {
+        MDialogConfig mDialogConfig = new MDialogConfig.Builder()
+//            //全屏背景窗体的颜色
+//            .setBackgroundWindowColor(getMyColor(R.color.colorDialogWindowBg))
+//            //View背景的颜色
+//            .setBackgroundViewColor(getMyColor(R.color.colorDialogViewBg2))
+//            //字体的颜色
+//            .setTextColor(getMyColor(R.color.colorAccent))
+//            //View边框的颜色
+//            .setStrokeColor(getMyColor(R.color.white))
+                //View边框的宽度
+                .setStrokeWidth(0)
+                //View圆角大小
+                .setCornerRadius(10)
+                //关闭的监听
+                .setOnDialogDismissListener(listener)
+                .build();
+        new MStatusDialog(this, mDialogConfig).show(text, this.getResources().getDrawable(R.mipmap.mn_icon_dialog_ok), 1000);
+    }
+
+    private void delayDismissProgressDialog() {
+        mHandler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                MProgressDialog.dismissProgress();
+            }
+        }, 3000);
+    }
+
+    public void hideInputManager() {
+        InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+        if (imm != null) {
+            imm.hideSoftInputFromWindow(getWindow().getDecorView().getWindowToken(), 0);
+        }
+    }
+
 }

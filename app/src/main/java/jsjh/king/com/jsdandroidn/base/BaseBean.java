@@ -1,5 +1,7 @@
 package jsjh.king.com.jsdandroidn.base;
 
+import android.databinding.BaseObservable;
+
 import java.io.Serializable;
 
 /**
@@ -8,5 +10,5 @@ import java.io.Serializable;
  * GitHub https://github.com/shaogeng1994
  */
 
-public class BaseBean implements Serializable{
+public class BaseBean extends BaseObservable implements Serializable{
 }
